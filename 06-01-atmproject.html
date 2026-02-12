@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafifaisem Bank ATM</title>
+</head>
+<body>
+
+     <style>
+        body{
+            background-color: rgb(236, 236, 29);
+            max-width: 520px;
+            margin: auto;
+
+        }
+
+        .card{
+            border: 1px solid #000000;
+            border-radius: 15px;
+            padding: 16px;
+        }
+
+        label{
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select, button{
+            width: 90%;
+            padding: 10px;
+            margin-top: 6px;
+            border-radius: 10px;
+            border: 1px solid #fcfcfc;
+        }
+
+        button{
+        cursor: pointer;
+        font-weight: 600;
+        }
+
+        .row{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+
+        }
+
+        .msg{
+            margin-top: 20px;
+            font-style: italic;
+            background-color:#ccc ;
+            padding: 12px;
+            border-radius: 10px;
+        }
+
+
+    </style>
+    
+     <h2>Wellcome to ATM</h2>
+
+     <div class="card">
+        <label>Enter Pin</label>
+        <input type="password" id="pin" placeholder="e.g 1234">
+
+        <label>Chose an Action</label>
+
+        <select id="action">
+            <option value="balane">Check Balanc</option>
+            <option value="deposit">Deposit</option>
+            <option value="withdraw">Withdraw</option>
+        </select>
+
+        <label>Shuma (per depozit-terheqja)</label>
+        <input type="number" id="amount" placeholder="e.g 50 eur">
+
+        <div class="row">
+            <button id="run">Run</button>
+            <button id="reset">Reset</button>
+        </div>
+       <div class="msg" id="message">Wecome! Enter a PIN and choose an action</div>
+
+     </div>
+
+     <script src="atm.js"></script>
+
+    
+    
+
+</body>
+</html>
